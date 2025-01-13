@@ -4,22 +4,13 @@ import { HomeIcon, NotebookIcon } from "lucide-react";
 export const DATA = {
   name: "Shuaibu Sani Barde",
   initials: "SSB",
-  url: "google.com",
+  url: "https://google.com",
   location: "Niger, MX",
   locationLink: "https://www.google.com/maps/place/minna",
-  description:
-    "Data Scientist/Analyst, Machine Learning Engineer. I provide solutions to people's problems.",
-  summary:
-    " ",
+  description: "Data Scientist/Analyst, Machine Learning Engineer. I provide solutions to people's problems.",
+  summary: "Passionate about leveraging data science to solve complex problems and deliver actionable insights.",
   avatarUrl: "/me.png",
-  skills: [
-    "Python",
-    "SQL",
-      "Excel",
-    "Power BI",
-    "Tableu",
-    "Bubble io"
-  ],
+  skills: ["Python", "SQL", "Excel", "Power BI", "Tableau", "Bubble.io"],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
@@ -32,39 +23,34 @@ export const DATA = {
         name: "GitHub",
         url: "https://github.com/barde-s",
         icon: Icons.github,
-
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/shuaibu-sani-barde-21b835227/",
         icon: Icons.linkedin,
-
         navbar: true,
       },
       X: {
         name: "X",
-        url: "x.com/s_barde74",
+        url: "https://x.com/s_barde74",
         icon: Icons.x,
-
         navbar: true,
       },
-      Youtube: {
-        name: "Youtube",
+      YouTube: {
+        name: "YouTube",
         url: "",
         icon: Icons.youtube,
         navbar: true,
       },
-      email: {
+      SendEmail: {
         name: "Send Email",
-        url: "#",
+        url: "mailto:mallamsz74@gmail.com",
         icon: Icons.email,
-
         navbar: false,
       },
     },
   },
-
   work: [
     {
       company: "LiteQode",
@@ -75,32 +61,29 @@ export const DATA = {
       logoUrl: "/atomic.png",
       start: "May 2021",
       end: "Oct 2022",
-      description:
-        "Implemented the Bitcoin discreet log contract (DLC) protocol specifications as an open source Typescript SDK. Dockerized all microservices and setup production kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of bitcoin trading strategies. Built a mobile app using react native and typescript.",
+      description: "Architected and implemented solutions for cryptocurrency trading strategies, containerized microservices, and data lake architectures.",
     },
     {
       company: "Omdena",
       badges: [],
       href: "https://omdena.com",
       location: "Remote",
-      title: "Junior ML engineer (Contributor)",
+      title: "Junior ML Engineer (Contributor)",
       logoUrl: "/shopify.svg",
       start: "January 2021",
       end: "April 2021",
-      description:
-        "Implemented a custom Kubernetes controller in Go to automate the deployment of MySQL and ProxySQL custom resources in order to enable 2,000+ internal developers to instantly deploy their app databases to production. Wrote several scripts in Go to automate MySQL database failovers while maintaining master-slave replication topologies and keeping Zookeeper nodes consistent with changes.",
+      description: "Developed Kubernetes automation tools and scripts for database management and deployment.",
     },
   ],
   education: [
     {
       school: "Bayero University Kano",
-      href: "buk.edu.ng",
-      degree: "BSC Computer Science",
+      href: "https://buk.edu.ng",
+      degree: "B.Sc. Computer Science",
       logoUrl: "",
       start: "2021",
       end: "2025",
-    }
-   
+    },
   ],
   projects: [
     {
@@ -108,92 +91,52 @@ export const DATA = {
       href: "https://github.com/Barde-S/Loan-Default-Prediction",
       dates: "2024",
       active: true,
-      description:
-        " ",
-      technologies: [
-        "Python",
-        "Jupyter Notebook",
-        "Machine Learning",
-      ],
+      description: "Built predictive models to assess loan default risks using machine learning.",
+      technologies: ["Python", "Jupyter Notebook", "Machine Learning"],
       links: [
         {
           type: "Repository",
           href: "https://github.com/Barde-S/Loan-Default-Prediction",
-          icon: <Icons.globe className="size-3" />,
+          icon: Icons.github,
         },
       ],
       image: "",
-      video:
-        " ",
+      video: "",
     },
     {
-  "title": "Crop Yield Prediction",
-  "href": "https://github.com/Barde-S/DigitalGreen_CropYield_Prediction",
-  "dates": "2024",
-  "active": true,
-  "description": "Developed a data analysis and machine learning pipeline to predict crop yield using various regression models. The pipeline includes data preprocessing, feature engineering, exploratory data analysis, model training, hyperparameter tuning, and evaluation. It utilizes Python libraries like scikit-learn, LightGBM, CatBoost, and XGBoost to build robust predictive models.",
-  "technologies": [
-    "Python",
-    "Pandas",
-    "NumPy",
-    "Matplotlib",
-    "Seaborn",
-    "Plotly",
-    "Scikit-learn",
-    "LightGBM",
-    "CatBoost",
-    "XGBoost",
-    "MLxtend",
-    "Statsmodels"
-  ],
-  "links": [
+      title: "Crop Yield Prediction",
+      href: "https://github.com/Barde-S/DigitalGreen_CropYield_Prediction",
+      dates: "2024",
+      active: true,
+      description: "Developed a machine learning pipeline for predicting crop yield with robust evaluation.",
+      technologies: ["Python", "Scikit-learn", "LightGBM", "XGBoost", "Pandas"],
+      links: [
+        {
+          type: "Repository",
+          href: "https://github.com/Barde-S/DigitalGreen_CropYield_Prediction",
+          icon: Icons.github,
+        },
+      ],
+      image: "",
+      video: "",
+    },
     {
-      "type": "Repository",
-      "href": "https://github.com/Barde-S/DigitalGreen_CropYield_Predictionn",
-      "icon": "<Icons.github className='size-3' />"
-    }
+      title: "Automated Trading Bot",
+      href: "https://github.com/Barde-S/TradingBot",
+      dates: "2024",
+      active: true,
+      description: "Built a bot integrating OANDA and Alpaca APIs for automated forex and stock trading.",
+      technologies: ["Python", "OANDA API", "Alpaca API", "APScheduler", "RESTful API"],
+      links: [
+        {
+          type: "Repository",
+          href: "https://github.com/Barde-S/TradingBot",
+          icon: Icons.github,
+        },
+      ],
+      image: "",
+      video: "",
+    },
   ],
-  "image": "",
-  "video": ""
-}
-,
-    {
-  "title": "Automated Trading Bot",
-  "href": "https://github.com/Barde-S/TradingBot",
-  "dates": "2024",
-  "active": true,
-  "description": "Developed an automated trading bot integrating OANDA and Alpaca APIs to execute trades based on predefined signals. The bot fetches real-time forex data, generates trade signals using custom logic, and schedules automated trade executions.",
-  "technologies": [
-    "Python",
-    "OANDA API",
-    "Alpaca API",
-    "yFinance",
-    "APScheduler",
-    "RESTful API",
-    "Jupyter Notebook"
-  ],
-  "links": [
-    {
-      "type": "Repository",
-      "href": "https://github.com/Barde-S/TradingBot",
-      "icon": "<Icons.github className='size-3' />"
-    }
-  ],
-  "image": "",
-  "video": ""
-}
-  ],
-  hackathons: [
-    {
-      title: " ",
-      dates: " ",
-      location: " ",
-      description:
-        " ",
-      image:
-        " ",
-      mlh: " ",
-      links: [],
-    }
-  ],
+  hackathons: [],
 } as const;
