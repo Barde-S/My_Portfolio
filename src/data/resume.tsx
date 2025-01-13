@@ -1,3 +1,17 @@
+import React from "react";
+import { IconProps } from "@/components/icons"; // Update the path to where `IconProps` is defined
+
+export const FramerMotionIcon = (props: IconProps) => (
+  <svg
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props} // Spread the props here
+  >
+    <title>Framer Motion</title>
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M12 12l-8 -8v16l16 -16v16l-4" />
+  </svg>
+);
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 
