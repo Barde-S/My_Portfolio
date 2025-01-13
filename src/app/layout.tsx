@@ -20,10 +20,10 @@ export const metadata: Metadata = {
   },
   description: DATA.description,
   openGraph: {
-    title: `${DATA.name}`,
+    title: DATA.name,
     description: DATA.description,
     url: DATA.url,
-    siteName: `${DATA.name}`,
+    siteName: DATA.name,
     locale: "en_US",
     type: "website",
   },
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: `${DATA.name}`,
+    title: DATA.name,
     card: "summary_large_image",
   },
   verification: {
@@ -50,9 +50,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode; // ReactNode ensures compatibility with all valid React elements
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -61,10 +61,13 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
+        {/* Wrapping components with providers */}
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
-            {children}
+            {/* Navbar should typically come first in layout */}
             <Navbar />
+            {/* Render child components */}
+            {children}
           </TooltipProvider>
         </ThemeProvider>
       </body>
