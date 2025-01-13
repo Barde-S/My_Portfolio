@@ -19,37 +19,38 @@ export const DATA = {
     email: "mallamsz74@gmail.com",
     tel: "+2348024564190",
     social: {
-      GitHub: {
-        name: "GitHub",
-        url: "https://github.com/barde-s",
-        icon: Icons.github,
-        navbar: true,
-      },
-      LinkedIn: {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/in/shuaibu-sani-barde-21b835227/",
-        icon: Icons.linkedin,
-        navbar: true,
-      },
-      X: {
-        name: "X",
-        url: "https://x.com/s_barde74",
-        icon: Icons.x,
-        navbar: true,
-      },
-      YouTube: {
-        name: "YouTube",
-        url: "",
-        icon: Icons.youtube,
-        navbar: true,
-      },
-      SendEmail: {
-        name: "Send Email",
-        url: "mailto:mallamsz74@gmail.com",
-        icon: Icons.email,
-        navbar: false,
-      },
-    },
+  GitHub: {
+    name: "GitHub",
+    url: "https://github.com/barde-s", // Correct format
+    icon: Icons.github,
+    navbar: true,
+  },
+  LinkedIn: {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/shuaibu-sani-barde-21b835227/", // Correct format
+    icon: Icons.linkedin,
+    navbar: true,
+  },
+  X: {
+    name: "X",
+    url: "https://x.com/s_barde74", // Correct format
+    icon: Icons.x,
+    navbar: true,
+  },
+  Youtube: {
+    name: "Youtube",
+    url: "https://youtube.com", // Example URL; update accordingly
+    icon: Icons.youtube,
+    navbar: true,
+  },
+  email: {
+    name: "Send Email",
+    url: "mailto:mallamsz74@gmail.com", // Use mailto for email links
+    icon: Icons.email,
+    navbar: false,
+  },
+},
+
   },
   work: [
     {
