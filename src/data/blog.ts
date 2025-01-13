@@ -14,16 +14,24 @@ type Metadata = {
   image?: string;
 };
 
-function getMDXFiles(dir: string) {
+type Post = {
+  source: string;
+  metadata: Metadata;
+  slug: string;
+};
+
+type BlogPost = Omit<Post, "source"> & { source: string };
+
+function getMDXFiles(dir: string): string[] {
   return fs.readdirSync(dir).filter((file) => path.extname(file) === ".mdx");
 }
 
-export async function markdownToHTML(markdown: string) {
-  const p = await unified()
+export async function markdownToHTML(markdown: string): Promise<string> {
+  const processed = await unified()
     .use(remarkParse)
     .use(remarkRehype)
     .use(rehypePrettyCode, {
-      // https://rehype-pretty.pages.dev/#usage
+      // Configuration for syntax highlighting
       theme: {
         light: "min-light",
         dark: "min-dark",
@@ -33,27 +41,30 @@ export async function markdownToHTML(markdown: string) {
     .use(rehypeStringify)
     .process(markdown);
 
-  return p.toString();
+  return processed.toString();
 }
 
-export async function getPost(slug: string) {
+export async function getPost(slug: string): Promise<Post> {
   const filePath = path.join("content", `${slug}.mdx`);
-  let source = fs.readFileSync(filePath, "utf-8");
+  const source = fs.readFileSync(filePath, "utf-8");
   const { content: rawContent, data: metadata } = matter(source);
   const content = await markdownToHTML(rawContent);
+
   return {
     source: content,
-    metadata,
+    metadata: metadata as Metadata,
     slug,
   };
 }
 
-async function getAllPosts(dir: string) {
-  let mdxFiles = getMDXFiles(dir);
+async function getAllPosts(dir: string): Promise<BlogPost[]> {
+  const mdxFiles = getMDXFiles(dir);
+
   return Promise.all(
     mdxFiles.map(async (file) => {
-      let slug = path.basename(file, path.extname(file));
-      let { metadata, source } = await getPost(slug);
+      const slug = path.basename(file, path.extname(file));
+      const { metadata, source } = await getPost(slug);
+
       return {
         metadata,
         slug,
@@ -63,6 +74,7 @@ async function getAllPosts(dir: string) {
   );
 }
 
-export async function getBlogPosts() {
-  return getAllPosts(path.join(process.cwd(), "content"));
+export async function getBlogPosts(): Promise<BlogPost[]> {
+  const contentPath = path.join(process.cwd(), "content");
+  return getAllPosts(contentPath);
 }
