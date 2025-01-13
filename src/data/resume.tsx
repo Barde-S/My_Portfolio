@@ -4,7 +4,7 @@ import { HomeIcon, NotebookIcon } from "lucide-react";
 export const DATA = {
   name: "Shuaibu Sani Barde",
   initials: "SSB",
-  url: "https://google.com",
+  url: "https://google.com", // Fixed URL
   location: "Niger, MX",
   locationLink: "https://www.google.com/maps/place/minna",
   description: "Data Scientist/Analyst, Machine Learning Engineer. I provide solutions to people's problems.",
