@@ -6,7 +6,7 @@ export const DATA = {
   initials: "SSB",
   url: ",
   location: "Niger, MX",
-  locationLink: "https://www.google.com/maps/place/abuja",
+  locationLink: "https://www.google.com/maps/place/minna",
   description:
     "Data Scientist/Analyst, Machine Learning Engineer. I provide solutions to people's problems.",
   summary:
