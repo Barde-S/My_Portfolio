@@ -2,8 +2,8 @@ import { GlobeIcon, MailIcon } from "lucide-react";
 
 // Define reusable type for SVG props
 export type IconProps = React.SVGProps<SVGSVGElement>;
-export const ResumeCard = () => {
-// Icons Component
+
+// Icons Component (moved outside ResumeCard)
 export const Icons = {
   globe: (props: IconProps) => <GlobeIcon {...props} />,
   email: (props: IconProps) => <MailIcon {...props} />,
@@ -47,7 +47,23 @@ export const Icons = {
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
       <title>Framer Motion</title>
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M12 12l-8 -8v16l16 -16v16l-4" />
+      <path
+        fill="currentColor"
+        d="M9 19h-5a2 2 0 01-2-2v-5a2 2 0 012-2h5a2 2 0 012 2v5a2 2 0 01-2 2zM22 17h-6v-6h6v6zM15 5v6h-6V5h6z"
+      />
     </svg>
   ),
-}};
+};
+
+// ResumeCard Component
+const ResumeCard = () => {
+  // Icons is now globally defined and reusable
+  return (
+    <div>
+      {/* Use Icons as needed */}
+      {Icons.linkedin({})}
+    </div>
+  );
+};
+
+export default ResumeCard;
