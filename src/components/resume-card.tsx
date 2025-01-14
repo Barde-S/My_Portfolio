@@ -2,7 +2,7 @@ import { GlobeIcon, MailIcon } from "lucide-react";
 
 // Define reusable type for SVG props
 export type IconProps = React.SVGProps<SVGSVGElement>;
-
+export const ResumeCard = () => {
 // Icons Component
 export const Icons = {
   globe: (props: IconProps) => <GlobeIcon {...props} />,
@@ -50,4 +50,4 @@ export const Icons = {
       <path d="M12 12l-8 -8v16l16 -16v16l-4" />
     </svg>
   ),
-};
+}};
