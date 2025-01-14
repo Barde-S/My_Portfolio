@@ -57,11 +57,10 @@ export const Icons = {
 
 // ResumeCard Component
 const ResumeCard = () => {
-  // Icons is now globally defined and reusable
   return (
     <div>
       {/* Use Icons as needed */}
-      {Icons.linkedin({})}
+      {Icons.linkedin({ width: 24, height: 24, color: 'blue' })}
     </div>
   );
 };
