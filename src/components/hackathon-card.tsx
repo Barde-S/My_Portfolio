@@ -48,7 +48,7 @@ export function HackathonCard({
       </div>
 
       {/* Links */}
-      {links?.length > 0 && (
+      {links && links.length > 0 && (
         <div className="mt-2 flex flex-wrap items-start gap-2">
           {links.map((link, idx) => (
             <Link href={link.href} key={idx} passHref>
