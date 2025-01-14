@@ -42,10 +42,11 @@ export const Icons = {
       />
     </svg>
   ),
-  const framermotion = (props: IconProps) => (
+  framermotion: (props: IconProps) => (
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
     <title>Framer Motion</title>
     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
     <path d="M12 12l-8 -8v16l16 -16v16l-4" />
   </svg>
-);
+)
+}
