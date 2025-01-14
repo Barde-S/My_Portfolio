@@ -1,9 +1,9 @@
 import { GlobeIcon, MailIcon } from "lucide-react";
-import { FramerMotionIcon } from "@/components/icons";
 
 // Define reusable type for SVG props
 export type IconProps = React.SVGProps<SVGSVGElement>;
 
+// Icons Component
 export const Icons = {
   globe: (props: IconProps) => <GlobeIcon {...props} />,
   email: (props: IconProps) => <MailIcon {...props} />,
@@ -47,4 +47,7 @@ export const Icons = {
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
       <title>Framer Motion</title>
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M12 12l-8 -8v16l16 -16v16l-4
+      <path d="M12 12l-8 -8v16l16 -16v16l-4" />
+    </svg>
+  ),
+};
