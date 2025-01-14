@@ -15,14 +15,14 @@ export default async function BlogPage() {
 
   // Ensure posts are sorted by date, descending
   const sortedPosts = posts.sort((a, b) => {
-  const dateA = new Date(a.metadata.publishedAt);
-  const dateB = new Date(b.metadata.publishedAt);
+  const dateA = new Date(dateAString);
+const dateB = new Date(dateBString);
 
-  // Handle invalid date values
-  if (isNaN(dateA.getTime())) return 1; // If dateA is invalid, move it to the end
-  if (isNaN(dateB.getTime())) return -1; // If dateB is invalid, move it to the end
+if (isNaN(dateA.getTime())) return -1;  // If dateA is invalid, move it to the end
+if (isNaN(dateB.getTime())) return 1;   // If dateB is invalid, move it to the end
 
-  return dateB - dateA; // Subtract to sort descending
+return dateB.getTime() - dateA.getTime(); // Ensure you are comparing timestamps (in milliseconds)
+
 });
 
   return (
